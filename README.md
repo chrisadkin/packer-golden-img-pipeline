@@ -21,7 +21,6 @@ The pipeline comprises of the following stages:
 
 -- [Packer 1.7.10](https://developer.hashicorp.com/packer/downloads) installed locally
 -- [Terraform 1.6.2](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) installed locally
--- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli#install) installed locally
 -- A [HashiCorp Cloud Platform](https://www.hashicorp.com/cloud) account
 
 - AWS Prerequisites
@@ -31,7 +30,7 @@ The pipeline comprises of the following stages:
 - Azure Prerequisites
 
 - An Azure account
-- The Azure CLI installed locally
+- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli#install) installed locally
 
  
 
