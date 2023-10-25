@@ -28,3 +28,12 @@ The pipeline comprises of the following stages:
 ## Azure Prerequisites
 - An Azure account
 - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli#install) installed locally
+
+# Instructions and Narrative
+## Building An AWS AMI Image
+
+For building an AMI image and pushing it to a HCP Packer registry follow [this HashiCorp tutorial](https://developer.hashicorp.com/packer/tutorials/hcp-get-started/hcp-push-image-metadata)
+
+## Building An Azure Image
+
+
