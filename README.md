@@ -16,7 +16,6 @@ The pipeline comprises of the following stages:
 3. Virtual machine creation via Terraform using image details obtained from HCP Packer.
 
 # Prerequisites
-
 ## Generic Prerequisites
 
 - [Packer 1.7.10](https://developer.hashicorp.com/packer/downloads) installed locally
@@ -24,13 +23,8 @@ The pipeline comprises of the following stages:
 - A [HashiCorp Cloud Platform](https://www.hashicorp.com/cloud) account
 
 ## AWS Prerequisites
-
 - An AWS account with credentials set as local environment variables. These credentials must have permissions to create, modify, and delete EC2 instances. Refer to the documentation to find the full list IAM permissions required to run the amazon-ebs builder.
 
 ## Azure Prerequisites
-
 - An Azure account
 - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli#install) installed locally
-
- 
-
