@@ -18,6 +18,6 @@ The pipeline comprises of the following stages:
 # Prerequisites
 
 - [Packer 1.7.10](https://developer.hashicorp.com/packer/downloads) installed locally
-- [An HCP account](https://www.hashicorp.com/cloud)
+- A [HashiCorp Cloud Platform](https://www.hashicorp.com/cloud) account
 - An AWS account with credentials set as local environment variables. These credentials must have permissions to create, modify, and delete EC2 instances. Refer to the documentation to find the full list IAM permissions required to run the amazon-ebs builder.
 - [Terraform 1.6.2](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) installed locally
