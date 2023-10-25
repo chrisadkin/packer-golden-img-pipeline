@@ -35,5 +35,11 @@ The pipeline comprises of the following stages:
 For building an AMI image and pushing it to a HCP Packer registry follow [this HashiCorp tutorial](https://developer.hashicorp.com/packer/tutorials/hcp-get-started/hcp-push-image-metadata)
 
 ## Building An Azure Image
+### Create HCP Packer registry
+Go to the HashiCorp Cloud Platform portal. After logging in, you will find Packer under "Services" in the left navigation menu.
+
+You must enable the HCP Packer registry before Packer can publish build metadata to it. Click the Create a registry button after clicking on the Packer link under "Services" in the left navigation.
+This only needs to be done once.
+<Image>
 
 
