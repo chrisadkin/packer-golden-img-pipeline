@@ -18,6 +18,18 @@ The pipeline comprises of the following stages:
 # Prerequisites
 
 - [Packer 1.7.10](https://developer.hashicorp.com/packer/downloads) installed locally
+- [Terraform 1.6.2](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) installed locally
+- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli#install)
+- [Git](https://git-scm.com/downloads)
 - A [HashiCorp Cloud Platform](https://www.hashicorp.com/cloud) account
 - An AWS account with credentials set as local environment variables. These credentials must have permissions to create, modify, and delete EC2 instances. Refer to the documentation to find the full list IAM permissions required to run the amazon-ebs builder.
-- [Terraform 1.6.2](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) installed locally
+- An Azure account
+
+1. Follow the instructions in [this tutorial](https://developer.hashicorp.com/packer/tutorials/hcp-get-started/hcp-push-image-metadata) for creating an image and pushing this to a HCP Packer registry
+
+ # Instructions and Narrative
+
+ 1. Clone this repo
+
+ 
+
