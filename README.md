@@ -9,16 +9,15 @@ The Packer element of the workflow largely mirrors the contents of [this HashiCo
 
 The pipeline comprises of the following stages:
 
-1. Packer HCL file creation for golden images, these are essentially text files which specify how to create images in Packer's dialect of HashiCorp Configuration Language (HCL)
+1. Packer HCL file creation for golden images, these are essentially text files which specify how to create images in Packer's dialect of HashiCorp Configuration Language (HCL).
 
-2. Building an image via Packer and pushing its metadata to HCP Packer - what is essentially an image registry
+2. Building an image via Packer and pushing its metadata to HCP Packer - what is essentially an image registry.
 
-3. Log into HashiCorp Cloud Platform and create a Packer registry, note that this stores metadata associated with Packer built images and not the actual images themselves https://www.hashicorp.com/cloud
+3. Virtual machine creation via Terraform using image details obtained from HCP Packer.
 
-2. Build the image:
-   - You will need to specify environment variables for the whatever cloud provide the HCL file uses, for AWS for example you would specific:
+# Prerequisites
 
-     export AWS_ACCESS_KEY_ID="<anaccesskey>"
-     export AWS_SECRET_ACCESS_KEY="<asecretkey>"
-
- 
+- [Packer 1.7.10](https://developer.hashicorp.com/packer/downloads) installed locally
+- [An HCP account](https://www.hashicorp.com/cloud)
+- An AWS account with credentials set as local environment variables. These credentials must have permissions to create, modify, and delete EC2 instances. Refer to the documentation to find the full list IAM permissions required to run the amazon-ebs builder.
+- [Terraform 1.6.2](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) installed locally
