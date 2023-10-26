@@ -74,18 +74,18 @@ git clone https://github.com/chrisadkin/packer-golden-img-pipeline
 
 5. Log into Azure with the CLI:
 ```
-az login
+$ az login
 ```
    
 6. Create an Azure service principal:   
 ```
-az ad sp create-for-rbac --role Contributor --scopes /subscriptions/<subscription_id> --query "{ client_id: appId, client_secret: password, tenant_id: tenant }
+$ az ad sp create-for-rbac --role Contributor --scopes /subscriptions/<subscription_id> --query "{ client_id: appId, client_secret: password, tenant_id: tenant }
 ```
    Note the client id, client secret and tenant id that result from this.
 
 7. Create a resource group:
 ```
-az group create -l eastus -n hcp_packer_golden_img 
+$ az group create -l eastus -n hcp_packer_golden_img 
 ```
 
 8. Change directory to packer-golden-img-pipeline
@@ -170,3 +170,5 @@ ManagedImageLocation: East US
 
 --> azure-arm.ubuntu_server_22_04_lts: Published metadata to HCP Packer registry packer/ubuntu-server-jammy/iterations/01HDP4DSTJT49TPA4DYPGRYDS0
 ``` 
+
+15. Go back into the HCP console and check what images are in your HCP Packer registry:
