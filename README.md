@@ -57,7 +57,8 @@ For building an AMI image and pushing it to a HCP Packer registry follow [this H
    Once you create the service principal, click the service principal name to view its details. From the detail page, click + Generate key to create a client ID and secret.
 
    Copy and save the client ID and secret; you will not be able to retrieve the secret later. You will use these credentials in the next step.
-<Image>
+   
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/create_hcp_service_principal.png?raw=true">
  
    Once you generate the keys for the service principal, set the client ID and secret as environment variables so that Packer can authenticate with HCP.
 
