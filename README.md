@@ -138,7 +138,7 @@ build {
 }
 ```
 
-10. Using the text editor of your choice, open the variables.pkrvars.hcl file and replace the value placeholders in angular brackets with your own client, subscription and tenant id values:
+10. Using the text editor of your choice, open the ```variables.pkrvars.hcl``` file and replace the value placeholders in angular brackets with your own client, subscription and tenant id values:
 ```
 client_id       = "<Your service principal client id goes here>"
 client_secret   = "<Your service principal client secret goes here>"
