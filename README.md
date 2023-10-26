@@ -60,7 +60,7 @@ For building an AMI image and pushing it to a HCP Packer registry follow [this H
 
    Once you generate the keys for the service principal, set the client ID and secret as environment variables so that Packer can authenticate with HCP.
 
-In your terminal, set an environment variable for the client ID.
+   In your terminal, set an environment variable for the client ID.
 
 4. Clone this repo:
 ```
