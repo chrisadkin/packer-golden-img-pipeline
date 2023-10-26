@@ -37,25 +37,24 @@ For building an AMI image and pushing it to a HCP Packer registry follow [this H
 ## Building An Azure Image
 
 1. Create HCP Packer registry
+   Go to the HashiCorp Cloud Platform portal. After logging in, you will find Packer under "Services" in the left navigation menu.
 
-Go to the HashiCorp Cloud Platform portal. After logging in, you will find Packer under "Services" in the left navigation menu.
-
-You must enable the HCP Packer registry before Packer can publish build metadata to it. Click the Create a registry button after clicking on the Packer link under "Services" in the left navigation.
-This only needs to be done once.
+   You must enable the HCP Packer registry before Packer can publish build metadata to it. Click the Create a registry button after clicking on the Packer link under "Services" in the left navigation.
+   This only needs to be done once.
 <Image>
 
 2. Create HCP service principal and set the HCP_CLIENT_ID and HCP_SECRET environment variables
 
-In HCP Packer, go to Access control (IAM) in the left navigation menu, then select the Service principals tab.
+   In HCP Packer, go to Access control (IAM) in the left navigation menu, then select the Service principals tab.
 
-Create a service principal named packer with the Contributor role.
+   Create a service principal named packer with the Contributor role.
 
-Once you create the service principal, click the service principal name to view its details. From the detail page, click + Generate key to create a client ID and secret.
+   Once you create the service principal, click the service principal name to view its details. From the detail page, click + Generate key to create a client ID and secret.
 
-Copy and save the client ID and secret; you will not be able to retrieve the secret later. You will use these credentials in the next step.
+   Copy and save the client ID and secret; you will not be able to retrieve the secret later. You will use these credentials in the next step.
 <Image>
 
-Once you generate the keys for the service principal, set the client ID and secret as environment variables so that Packer can authenticate with HCP.
+   Once you generate the keys for the service principal, set the client ID and secret as environment variables so that Packer can authenticate with HCP.
 
 In your terminal, set an environment variable for the client ID.
 
