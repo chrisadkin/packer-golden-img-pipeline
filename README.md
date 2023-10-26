@@ -156,7 +156,7 @@ $ packer init
 $ packer build -var-file=variables.pkrvars.hcl .
 ```      
     
-    once the build has completed a series of messages similiar to the following should be visible at the end of the packer output:
+14. Once the build has completed a series of messages similiar to the following should be visible at the end of the packer output:
 
 ``` 
 ==> Builds finished. The artifacts of successful builds are:
