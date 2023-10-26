@@ -172,3 +172,5 @@ ManagedImageLocation: East US
 ``` 
 
 15. Go back into the HCP console and check what images are in your HCP Packer registry:
+
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/hcp_packer_registry.png?raw=true">
