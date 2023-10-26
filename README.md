@@ -139,5 +139,10 @@ build {
 ```
 
 10. Using the text editor of your choice, replace the placeholders in angular brackets with the relevant Azure subscription, tenant and service principal values.
+    
+12. Install the packer plugins:
+```
+packer 
+```    
 
 
