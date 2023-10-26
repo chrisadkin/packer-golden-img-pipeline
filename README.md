@@ -15,6 +15,8 @@ The pipeline comprises of the following stages:
 
 3. As part of the ```packer build``` process, the image metadata is pushed to a HCP Packer registry.
 
+4. Create a Terraform configuration that references the image in the HCP Packer registry via the 
+
 # Prerequisites
 ## Generic Prerequisites
 
