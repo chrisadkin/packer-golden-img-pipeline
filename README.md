@@ -147,10 +147,14 @@ tenant_id       = "<Your Azure tenant id goes here>"
 ```
     
 11. Install the packer plugins:
-```packer init```
+```
+$ packer init
+```
 
-12. Build the image:
-```packer build -var-file=variables.pkrvars.hcl .```      
+13. Build the image:
+```
+$ packer build -var-file=variables.pkrvars.hcl .
+```      
     
     once the build has completed a series of messages similiar to the following should be visible at the end of the packer output:
 
