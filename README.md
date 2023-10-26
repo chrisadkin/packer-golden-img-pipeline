@@ -45,7 +45,8 @@ For building an AMI image and pushing it to a HCP Packer registry follow [this H
 
    You must enable the HCP Packer registry before Packer can publish build metadata to it. Click the Create a registry button after clicking on the Packer link under "Services" in the left navigation.
    This only needs to be done once.
-<Image>
+
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/create_hcp_packer_registry.png?raw=true">
 
 2. Create HCP service principal and set the HCP_CLIENT_ID and HCP_SECRET environment variables
 
