@@ -11,9 +11,9 @@ The pipeline comprises of the following stages:
 
 1. Packer HCL file creation for golden images, these are essentially text files which specify how to create images in Packer's dialect of HashiCorp Configuration Language (HCL).
 
-2. Building an image via Packer and pushing its metadata to HCP Packer - what is essentially an image registry.
+2. Building an image via Packer and pushing its metadata to HCP Packer.
 
-3. Virtual machine creation via Terraform using image details obtained from HCP Packer.
+3. As part of the ```packer build``` process, the image metadata is pushed to a HCP Packer registry.
 
 # Prerequisites
 ## Generic Prerequisites
