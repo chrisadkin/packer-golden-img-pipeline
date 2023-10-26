@@ -171,6 +171,6 @@ ManagedImageLocation: East US
 --> azure-arm.ubuntu_server_22_04_lts: Published metadata to HCP Packer registry packer/ubuntu-server-jammy/iterations/01HDP4DSTJT49TPA4DYPGRYDS0
 ``` 
 
-15. Go back into the HCP console and check what images are in your HCP Packer registry:
+15. Go back into the HCP console and check the contents of your HCP Packer registry:
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/hcp_packer_registry.png?raw=true">
