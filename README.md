@@ -33,4 +33,4 @@ The pipeline comprises of the following stages:
 
 # Instructions
 
-1. Build and push images to a HCP Packer registry can be found [here](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/PACKER.md)
+1. Instructions for building and pushing images to a HCP Packer registry can be found [here](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/PACKER.md)
