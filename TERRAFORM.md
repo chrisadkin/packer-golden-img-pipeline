@@ -50,7 +50,6 @@ data "hcp_packer_image" "ubuntu_server_jammy" {
   region          = "East US"
 }
 ```
-
    - the ```azurerm_virtual_machine``` resource in which the image id is referred to:
 ```
 resource "azurerm_virtual_machine" "main" {
