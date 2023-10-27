@@ -41,7 +41,7 @@ $ az login
 
 4. Open the ```main.tf``` file and note:
 
-   - the hcp_packer_image datasource at the top of the file
+- the hcp_packer_image datasource at the top of the file
 ```
 data "hcp_packer_image" "ubuntu_server_jammy" {
   bucket_name     = "ubuntu-server-jammy"
@@ -50,7 +50,7 @@ data "hcp_packer_image" "ubuntu_server_jammy" {
   region          = "East US"
 }
 ```
-   - the ```azurerm_virtual_machine``` resource in which the image id is referred to:
+- the ```azurerm_virtual_machine``` resource in which the image id is referred to:
 ```
 resource "azurerm_virtual_machine" "main" {
   name                  = "${var.prefix}-vm"
