@@ -35,4 +35,4 @@ The pipeline comprises of the following stages:
 
 1. Build and push images to a HCP Packer registry:
    - Instructions for building an AWS AMI image can be found [here](https://developer.hashicorp.com/packer/tutorials/hcp-get-started/hcp-push-image-metadata)
-   - Instructions for building an Azure image can be found [here](https://github.com/chrisadkin/packer-golden-img-pipeline/edit/main/PACKER.md)
+   - Instructions for building an Azure image can be found [here]()
