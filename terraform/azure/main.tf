@@ -55,14 +55,7 @@ resource "azurerm_virtual_machine" "main" {
 
   delete_os_disk_on_termination = true
   delete_data_disks_on_termination = true
-/*
-  storage_image_reference {
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts"
-    version   = "latest"
-  }  
-*/
+
   storage_image_reference {
     id = data.hcp_packer_image.ubuntu_server_jammy.cloud_image_id
   }
