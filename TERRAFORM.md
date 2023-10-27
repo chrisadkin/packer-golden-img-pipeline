@@ -102,8 +102,41 @@ $ terraform plan
 7. Apply the configuration:
 ```
 $ terraform apply -auto-approve
-```   
+```
+   the tail of the output from this should look like:
+```
+azurerm_resource_group.ubuntu_22_04_lts: Creating...
+azurerm_resource_group.ubuntu_22_04_lts: Creation complete after 2s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources]
+azurerm_virtual_network.main: Creating...
+azurerm_virtual_network.main: Creation complete after 6s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources/providers/Microsoft.Network/virtualNetworks/u2204lts-network]
+azurerm_subnet.internal: Creating...
+azurerm_subnet.internal: Creation complete after 5s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources/providers/Microsoft.Network/virtualNetworks/u2204lts-network/subnets/internal]
+azurerm_network_interface.main: Creating...
+azurerm_network_interface.main: Still creating... [10s elapsed]
+azurerm_network_interface.main: Creation complete after 12s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources/providers/Microsoft.Network/networkInterfaces/u2204lts-nic]
+azurerm_virtual_machine.main: Creating...
+azurerm_virtual_machine.main: Still creating... [10s elapsed]
+azurerm_virtual_machine.main: Still creating... [20s elapsed]
+azurerm_virtual_machine.main: Still creating... [30s elapsed]
+azurerm_virtual_machine.main: Still creating... [40s elapsed]
+azurerm_virtual_machine.main: Still creating... [50s elapsed]
+azurerm_virtual_machine.main: Still creating... [1m0s elapsed]
+azurerm_virtual_machine.main: Still creating... [1m10s elapsed]
+azurerm_virtual_machine.main: Still creating... [1m20s elapsed]
+azurerm_virtual_machine.main: Still creating... [1m30s elapsed]
+azurerm_virtual_machine.main: Still creating... [1m40s elapsed]
+azurerm_virtual_machine.main: Still creating... [1m50s elapsed]
+azurerm_virtual_machine.main: Still creating... [2m0s elapsed]
+azurerm_virtual_machine.main: Still creating... [2m10s elapsed]
+azurerm_virtual_machine.main: Still creating... [2m20s elapsed]
+azurerm_virtual_machine.main: Creation complete after 2m21s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources/providers/Microsoft.Compute/virtualMachines/u2204lts-vm]
+
+Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
+```
+
+8. Log into the Azure portal and check what virtual machines are present:
    
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/azure_portal_vms.png?raw=true">
  
    
    
