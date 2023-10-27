@@ -144,7 +144,9 @@ build {
 ```
 
 __Note__
-Take note of the ```hcp_packer_registry``` block, it is this when used in conjunction with the ```HCP_``` environment variables which result in the image's metadata being stored in the HCP Packer registry.
+
+The ```hcp_packer_registry``` block, it is this when used in conjunction with the ```HCP_``` environment variables which result in the image's metadata being stored
+in the HCP Packer registry.
 
 10. Using the text editor of your choice, open the ```variables.pkrvars.hcl``` file and replace the value placeholders in angular brackets with your own client, subscription and tenant id values:
 ```
