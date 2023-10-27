@@ -7,7 +7,9 @@ The code for the ```hcp_packer_image``` datasource block can be obtained via the
 
 For Azure, click on the image name in the registry:
 
-<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/create_hcp_packer_registry.png?raw=true">
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/hcp_packer_azure_image.png?raw=true">
+
+and then click on 
 
 2. Create HCP service principal and set the HCP_CLIENT_ID and HCP_SECRET environment variables
 
