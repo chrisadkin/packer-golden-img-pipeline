@@ -41,4 +41,7 @@ The pipeline comprises of the following stages:
 
 - [Create an AWS EC2 instance using a HCP Packer image](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/TERRAFORM_AWS.md)
 
+# Optional Steps
 
+Terraform Cloud and Terraform Enterprise add further value to this solution via run task integration, which validates that the machine images in your Terraform configuration are not revoked for being insecure or outdated, as
+covered by [this](https://developer.hashicorp.com/packer/tutorials/hcp/setup-tfc-run-task) tutorial.
