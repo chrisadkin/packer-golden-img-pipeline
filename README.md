@@ -33,12 +33,13 @@ The pipeline comprises of the following stages:
 
 # Instructions
 
-Instructions for:
+1. To begin with, building and push some images to a HCP Packer registry per the instructions [here](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/PACKER.md)
 
-- Building and pushing images to a HCP Packer registry can be found [here](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/PACKER.md)
+2. Once an image has been successfully pushed up to the HCP Packer registry, a virtual machines for be created using these images per these instructions.
 
-- Creating an Azure virtual machine using the HCP Packer Azure image can be found here [here](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/TERRAFORM_AZURE.md)
+- [How to create an Azure virtual machine using a HCP Packer image](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/TERRAFORM_AZURE.md)
 
-- Creating an Azure virtual machine using the HCP Packer Azure image can be found here [here](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/TERRAFORM_AWS.md)
+- [How to create an AWS EC2 instance using a HCP Packer image](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/TERRAFORM_AWS.md)
+](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/TERRAFORM_AWS.md)
 
 
