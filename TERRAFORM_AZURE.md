@@ -129,6 +129,8 @@ Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
 8. Log into the Azure portal and check what virtual machines are present:
    
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/azure_portal_vms.png?raw=true">
- 
-   
-   
+
+9. If the virtual machine is no longer required, remove it using the following command:
+```
+terraform destroy
+```     
