@@ -1,3 +1,10 @@
+data "hcp_packer_image" "learn-packer-ubuntu" {
+  bucket_name     = "learn-packer-ubuntu"
+  channel         = "latest"
+  cloud_provider  = "aws"
+  region          = "us-east-2"
+}
+
 resource "aws_vpc" "ubuntu-focal" {
   cidr_block = "172.16.0.0/16"
 
@@ -14,13 +21,6 @@ resource "aws_subnet" "ubuntu-focal" {
   tags = {
     Name = "ubuntu-focal-hardened"
   }
-}
-
-data "hcp_packer_image" "learn-packer-ubuntu" {
-  bucket_name     = "learn-packer-ubuntu"
-  channel         = "latest"
-  cloud_provider  = "aws"
-  region          = "us-east-2"
 }
 
 resource "aws_instance" "ubuntu-focal" {
