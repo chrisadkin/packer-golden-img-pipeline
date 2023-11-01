@@ -14,7 +14,7 @@ and then click on "Use with Terraform":
 
 # Apply The Terraform Config
 
-This section assumes that an Azure image has already been created per [these instructions]()
+This section assumes that an Azure image has already been created per [these instructions](https://developer.hashicorp.com/packer/tutorials/hcp-get-started/hcp-push-image-metadata)
 
 1. Clone this repo unless this has already been done:
 ```
