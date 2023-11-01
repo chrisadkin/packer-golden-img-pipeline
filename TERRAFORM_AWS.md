@@ -1,4 +1,4 @@
-# Terraform Virtual Machine Deployment Instructions
+# Obtain The Terraform HCP Packer Datasource
 
 The key component in a Terraform configuration that enables this is the ```hcp_packer_image``` datasource, this acts as the link between an image in the HCP Packer registry and the resource in the Terraform configuration used for creating the actual virtual machine.  
 
