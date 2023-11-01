@@ -36,44 +36,22 @@ $ export AWS_SECRET_ACCESS_KEY = "<Your AWS access key secret goes here>"
 
 - the hcp_packer_image datasource at the top of the file
 ```
-data "hcp_packer_image" "ubuntu_server_jammy" {
-  bucket_name     = "ubuntu-server-jammy"
+data "hcp_packer_image" "learn-packer-ubuntu" {
+  bucket_name     = "learn-packer-ubuntu"
   channel         = "latest"
-  cloud_provider  = "azure"
-  region          = "East US"
+  cloud_provider  = "aws"
+  region          = "us-east-2"
 }
 ```
-- the ```azurerm_virtual_machine``` resource in which the image id is referred to:
+- the ```aws_instance``` resource in which the image id is referred to:
 ```
-resource "azurerm_virtual_machine" "main" {
-  name                  = "${var.prefix}-vm"
-  location              = azurerm_resource_group.ubuntu_22_04_lts.location
-  resource_group_name   = azurerm_resource_group.ubuntu_22_04_lts.name
-  network_interface_ids = [azurerm_network_interface.main.id]
-  vm_size               = "Standard_DS1_v2"
-  
-  delete_os_disk_on_termination = true
-  delete_data_disks_on_termination = true
+resource "aws_instance" "ubuntu-focal" {
+  ami           = data.hcp_packer_image.learn-packer-ubuntu.cloud_image_id
+  instance_type = "t2.micro"
+  subnet_id     = aws_subnet.ubuntu-focal.id
 
-  storage_image_reference {
-    id = data.hcp_packer_image.ubuntu_server_jammy.cloud_image_id
-  }
-  storage_os_disk {
-    name              = "myosdisk1"
-    caching           = "ReadWrite"
-    create_option     = "FromImage"
-    managed_disk_type = "Standard_LRS"
-  }
-  os_profile {
-    computer_name  = "hostname"
-    admin_username = "testadmin"
-    admin_password = "Password1234!"
-  }
-  os_profile_linux_config {
-    disable_password_authentication = false
-  }
   tags = {
-    environment = "staging"
+    Name = "ubuntu-focal-hardened"
   }
 }
 ```
@@ -89,7 +67,7 @@ $ terraform plan
 ```
    the tail of the output this rsults in should state the following:
 ```
-   Plan: 5 to add, 0 to change, 0 to destroy.
+   Plan: 3 to add, 0 to change, 0 to destroy.
 ```
 
 7. Apply the configuration:
@@ -98,38 +76,19 @@ $ terraform apply -auto-approve
 ```
    the tail of the output from this should look like:
 ```
-azurerm_resource_group.ubuntu_22_04_lts: Creating...
-azurerm_resource_group.ubuntu_22_04_lts: Creation complete after 2s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources]
-azurerm_virtual_network.main: Creating...
-azurerm_virtual_network.main: Creation complete after 6s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources/providers/Microsoft.Network/virtualNetworks/u2204lts-network]
-azurerm_subnet.internal: Creating...
-azurerm_subnet.internal: Creation complete after 5s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources/providers/Microsoft.Network/virtualNetworks/u2204lts-network/subnets/internal]
-azurerm_network_interface.main: Creating...
-azurerm_network_interface.main: Still creating... [10s elapsed]
-azurerm_network_interface.main: Creation complete after 12s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources/providers/Microsoft.Network/networkInterfaces/u2204lts-nic]
-azurerm_virtual_machine.main: Creating...
-azurerm_virtual_machine.main: Still creating... [10s elapsed]
-azurerm_virtual_machine.main: Still creating... [20s elapsed]
-azurerm_virtual_machine.main: Still creating... [30s elapsed]
-azurerm_virtual_machine.main: Still creating... [40s elapsed]
-azurerm_virtual_machine.main: Still creating... [50s elapsed]
-azurerm_virtual_machine.main: Still creating... [1m0s elapsed]
-azurerm_virtual_machine.main: Still creating... [1m10s elapsed]
-azurerm_virtual_machine.main: Still creating... [1m20s elapsed]
-azurerm_virtual_machine.main: Still creating... [1m30s elapsed]
-azurerm_virtual_machine.main: Still creating... [1m40s elapsed]
-azurerm_virtual_machine.main: Still creating... [1m50s elapsed]
-azurerm_virtual_machine.main: Still creating... [2m0s elapsed]
-azurerm_virtual_machine.main: Still creating... [2m10s elapsed]
-azurerm_virtual_machine.main: Still creating... [2m20s elapsed]
-azurerm_virtual_machine.main: Creation complete after 2m21s [id=/subscriptions/58844ee6-d1cb-4ebf-b9c2-378e143fcb40/resourceGroups/u2204lts-resources/providers/Microsoft.Compute/virtualMachines/u2204lts-vm]
+aws_vpc.ubuntu-focal: Creating...
+aws_vpc.ubuntu-focal: Creation complete after 3s [id=vpc-0a01bf311f0f1dba8]
+aws_subnet.ubuntu-focal: Creating...
+aws_subnet.ubuntu-focal: Creation complete after 1s [id=subnet-081fa8bc9b72fbd91]
+aws_instance.ubuntu-focal: Creating...
+aws_instance.ubuntu-focal: Still creating... [10s elapsed]
+aws_instance.ubuntu-focal: Still creating... [20s elapsed]
+aws_instance.ubuntu-focal: Still creating... [30s elapsed]
+aws_instance.ubuntu-focal: Creation complete after 33s [id=i-0e22f7081a6bb1b59]
 
-Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 ```
 
-8. Log into the Azure portal and check what virtual machines are present:
+8. Log into the AWS console and check what virtual machines are present:
    
-<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/azure_portal_vms.png?raw=true">
- 
-   
-   
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/aws_console_ec2.png?raw=true">
