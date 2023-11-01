@@ -43,5 +43,5 @@ The pipeline comprises of the following stages:
 
 # Terraform Cloud / Enterprise HCP Packer Run Task Integration
 
-Terraform Cloud and Terraform Enterprise add further value to this solution via run task integration, which validates that the machine images in your Terraform configuration are not revoked for being insecure or outdated, as
-covered by [this](https://developer.hashicorp.com/packer/tutorials/hcp/setup-tfc-run-task) tutorial.
+Terraform Cloud and Terraform Enterprise add further value to this solution via run task integration - this validates that the machine images in your Terraform configuration are not revoked for being insecure or outdated.
+Refer to [this tutorial](https://developer.hashicorp.com/packer/tutorials/hcp/setup-tfc-run-task) for further information on this subject.
