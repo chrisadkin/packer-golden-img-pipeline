@@ -92,3 +92,9 @@ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 8. Log into the AWS console and check what EC2 instances are present:
    
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/aws_console_ec2.png?raw=true">
+
+9. If the EC2 instance is no longer required, remove it using this command:
+```
+$ terraform destroy
+```
+    
