@@ -23,12 +23,13 @@ $ git clone https://github.com/chrisadkin/packer-golden-img-pipeline
 
 2. Change directory to packer-golden-img-pipeline/terraform/azure:
 ```
-$ cd packer-golden-img-pipeline/terraform/azure
+$ cd packer-golden-img-pipeline/terraform/aws
 ```
 
-3. Log into Azure:
+3. Set the environment variables required by the AWS provider in the config, substituting the placeholders below with you own values:
 ```
-$ az login
+$ export AWS_ACCESS_KEY_ID     = "<Your AWS access key Id goes here>"
+$ export AWS_SECRET_ACCESS_KEY = "<Your AWS access key secret goes here>"
 ```
 
 4. Open the ```main.tf``` file and note:
