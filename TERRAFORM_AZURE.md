@@ -14,7 +14,7 @@ and then click on "Use with Terraform":
 
 # Apply The Terraform Config
 
-This section assumes that an Azure image has already been created per [these instructions]()
+This section assumes that an Azure image has already been created per [these instructions](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/PACKER.md)
 
 1. Clone this repo unless this has already been done:
 ```
