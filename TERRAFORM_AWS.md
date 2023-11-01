@@ -12,7 +12,7 @@ and then click on "Use with Terraform":
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/png_images/hcp_packer_aws_datasource.png?raw=true">
 
-# Azure
+# Apply The Terraform Config
 
 This section assumes that an Azure image has already been created per [these instructions]()
 
