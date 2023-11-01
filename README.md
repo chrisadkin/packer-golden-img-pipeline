@@ -33,9 +33,9 @@ The pipeline comprises of the following stages:
 
 # Instructions
 
-1. To begin with, building and push some images to a HCP Packer registry per the instructions [here](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/PACKER.md)
+1. Build and push images to a HCP Packer registry by following the instructions [here](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/PACKER.md)
 
-2. Once an image has been successfully pushed up to the HCP Packer registry, a virtual machines for be created using these images per these instructions.
+2. Once an image has been successfully pushed up to the HCP Packer registry, virtual machines can be created using these images per these instructions.
 
 - [How to create an Azure virtual machine using a HCP Packer image](https://github.com/chrisadkin/packer-golden-img-pipeline/blob/main/TERRAFORM_AZURE.md)
 
